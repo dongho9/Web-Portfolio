@@ -1,0 +1,488 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+$bgColor : skyblue;
+$bgColor02 : rgba(59, 59, 59, 0.8);
+$bgColor03 : #333;
+$fontColor: #fff;
+$mainColor: #ff0;
+$subColor: #0f0;
+
+html {
+  scroll-behavior: smooth 3s;
+  overflow-x: hidden;
+}
+
+body {
+  transition: 0.5s;
+  color: #334535;
+  background-color: antiquewhite;
+}
+
+header{
+  height: 100vh;
+  width: 100%;
+  transition: 0.5s;
+  position: relative;
+  z-index: 10000000;
+  opacity: 1;
+}
+
+header h1 {
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: fixed;
+  z-index: 110;
+}
+
+header h1 a {
+  display: block;
+  margin: 0 auto;
+  line-height: 50px;
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  color: #000;
+  font-family: 'Luxurious Script';
+  font-size: 48px;
+}
+
+#intro {
+  height: 100vh;
+  width: 100%;
+}
+
+.c_btn{
+  display: block;
+  width: 110px;
+  border-radius: 25px;
+  text-align: center;
+  height: 40px;
+  z-index: 1000;
+  color: #000;
+  position: fixed;
+  top: 4%;
+  right: 5%;
+  border: 3px solid #334535;
+  font: 700 20px/40px "Nanum Myeong jo"; /*축약법 - 굵기 크기/줄간격 끌꼴*/
+  transition: 0.5s;
+}
+.c_btn:hover{
+  background-color: #334535;
+  color: #fff !important;
+}
+
+#intro h2 {
+  font-family: "League Gothic", arial, sans-serif;
+  font-size: 180px;
+  text-transform: uppercase;
+  top: 50%;
+  left: -50%;
+  transform: translateY(-50%);
+  position: absolute;
+  color: #334535;
+}
+.ani01 {
+  animation: title_ani infinite 5s;
+}
+
+.scroll_btn {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  text-align: center;
+  font-size: 16px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  color: #fff;
+}
+
+i.fa-arrow-down {
+  font-size: 35px;
+  display: block;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  line-height: 150px;
+  border-radius: 50%;
+  border: 1px solid #334535;
+  transition: 0.5s;
+  color: #334535;
+}
+
+i.fa-arrow-down:hover {
+  background-color: #334535;
+  color: #fff;
+}
+
+.ani02 {
+  animation: scroll_ani infinite 5s;
+}
+
+.gnb {
+  top: 3%;
+  left: 5%;
+  width: 90%;
+  position: fixed;
+  z-index: 100;
+  border-top: 3px solid #334535;
+  border-bottom: 3px solid #334535;
+}
+
+.gnb ul {
+  width: 100%;
+  display: flex;
+}
+
+.gnb ul li {
+  text-align: right;
+  margin-right: 20px;
+}
+
+.gnb ul li a:hover {
+  font-size: 40px;
+}
+
+.gnb ul li a {
+  transition: 0.5s;
+  font: 700 24px/60px "Nanum Myeong jo"; /*축약법 - 굵기 크기/줄간격 끌꼴*/
+  color: #334535;
+  display: inline;
+}
+
+.act {
+  z-index: 100;
+  width: 100%;
+}
+
+
+
+section {
+  width: 100%;
+  margin: 0 auto;
+  height: 900px;
+}
+
+main section {
+  position: relative;
+  height: 100vh;
+}
+
+main section h2 {
+  font-size: 60px;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+}
+#about h2{
+  transform: translateY(-50%);
+}
+#about {
+  overflow: hidden;
+}
+.myinfo{
+    color: #000;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20%;
+    line-height: 50px;
+    font-size: 34px;
+    font-family: 'Marcellus';
+    opacity: 0;
+    width: 700px;
+}
+.myinfo img{
+  width: 100%;
+  box-shadow: 0px 0px 8px #000;
+  opacity: 0;
+}
+
+
+
+#pr1 {
+  width: 100%;
+  height: 100%;
+  position: relative; 
+}
+#pr1 h2{
+  position: absolute;
+  top: 0;
+  margin-bottom: 100px;
+}
+.t_box{
+  position: sticky;
+  top: 0;
+  background-color: antiquewhite;
+  z-index: 10000;
+    padding-top: 50px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+}
+.l_box{
+    width: 50%;
+    border-top: 3px solid #334535;
+    text-transform: uppercase;
+    position: relative;
+    line-height: 30px;
+}
+.l_box h3{
+    padding-top: 20px;
+  }
+  .l_box h3 p{
+    font-weight: bold;
+}
+.l_box span{
+  display: block;
+  font-weight: bold;   
+  font-family: "Gowun Dodum";
+  font-size: 18px;
+}
+.l_box h4{
+    padding-top: 60px;
+    font-size: 48px;
+    line-height: 50px;
+}
+.l_box a{
+    position: absolute;
+    display: inline-block;
+    top: 65%;
+    border: 2px solid #334535;
+    color: #334535;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 20px;
+    transition: 0.5s;
+    font-family: "Gowun Dodum";
+    font-weight: bold;
+    font-size: 16px;
+}
+.code_btn{
+    left: 140px;
+    width: 150px !important;
+    white-space: nowrap;
+}
+.l_box a:hover{
+    background-color: #334535;
+    color: #fff;
+}
+.r_box{
+    width: 50%;
+    text-align: center;
+}
+.r_box img{
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+  }
+.sn{
+  font-size: 24px;
+  padding-top: 60px;
+  font-weight: bold;
+}
+
+.mimg{
+  width: 150px !important;
+  height: 300px !important;
+  position: absolute;
+  bottom: 6%;
+  left: 49%;
+}
+.mimg2{
+  width: 150px !important;
+  height: 300px !important;
+  position: absolute;
+  bottom: 6%;
+  left: 49%;
+}
+.mimg3{
+  width: 150px !important;
+  height: 300px !important;
+  position: absolute;
+  bottom: 6%;
+  left: 49%;
+}
+
+#design {
+  position: relative;
+  // background-color: salmon;
+}
+#design h2{
+  display: none;
+  color: #000;
+  text-align: center;
+}
+.wrap{
+  display: flex;
+  list-style: none;
+  height: 100%;
+  background-color: #fff;
+}
+.wrap li{
+  width: 25%;
+  height: 100%;
+  transition: 0.5s;
+  position: relative;
+}
+.wrap li:hover .c_info{
+  display: block;
+}
+.c_info{
+  display: none;
+  transition: 0.5s;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 10%;
+}
+.re{
+  position: absolute;
+  top: 50%;
+  display: block;
+  z-index: 10000;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+  opacity: 0.6;
+}
+.bgc{
+  background-image: url(../images/bgc1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+}
+.bgc2{
+  background-image: url(../images/naverlogo.png);
+  background-size: contain;
+  background-color: #03C75A;
+}
+.bgc3{
+  background: rosybrown;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.bgc4{
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+}
+.wrap li > div a{
+  display: block;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #334535;
+  border-radius: 20px;
+  padding: 12px 5px;
+  margin-bottom: 10px;
+  transition: 0.5s;
+  width: 140px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Gowun Dodum";
+}
+.wrap li > div a:hover{
+  background-color: #334535;
+  color: #fff;
+}
+.wrap li:hover{
+  width: 40%;
+}
+.wrap li:hover .bgc{
+  opacity: 1;
+}
+.wrap li:hover .re{
+  scale: 1.3;
+  opacity: 1;
+  left: 57%;
+}
+.wrap li span{
+  font-size: 34px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+}
+
+#contact {
+    // background-color: #000;
+    height: 600px;
+  z-index: 9;
+  background-image: url("../images/bg01.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* 배경고정 */
+  position: relative;
+}
+#contact h2{
+    color: #fff;
+    top: 20%;
+    font-size: 100px;
+    filter: none !important;
+}
+.goal{
+    position: absolute;
+    left: 5%;
+    top: 45%;
+    font-size: 21px;
+    width: 1200px;
+    margin: 0 auto;
+    color: #fff;
+    line-height: 40px;
+    font-family: "Gowun Dodum";
+
+}
+#contact a{
+    display: inline-block;
+    width: 120px;
+    line-height: 40px;
+    height: 40px;
+    border: 3px solid #fff;
+    color: #fff;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.5s;
+    position: absolute; 
+    bottom: 25%;
+    left: 5%;
+    font-family: "Gowun Dodum";
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.e_btn{
+    margin-left: 150px;
+}
+#contact a:hover{
+    background-color: #fff;
+    color: #000;
+}
+footer {
+  padding-top: 30px;
+  line-height: 30px;
+  height: 80px;
+  text-align: center;
+  color: #334535;
+      font-family: "Gowun Dodum";
+    font-weight: bold;
+    font-size: 16px;
+}/*# sourceMappingURL=main.css.map */
