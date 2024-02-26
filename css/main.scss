@@ -167,14 +167,11 @@ h1 img{
   top: 4%;
   right: 5%;
   border: 3px solid #fff;
+  background-color: #000;
   font: 700 20px/40px "Nanum Myeong jo"; /*축약법 - 굵기 크기/줄간격 끌꼴*/
   transition: 0.5s;
-  background-color: #000;
 }
-.c_btn:hover{
-  background-color: #000;
-  color: #fff !important;
-}
+
 
 #intro h2 {
   font-family: "League Gothic", arial, sans-serif;
@@ -282,7 +279,7 @@ i.fa-arrow-down:hover {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #FFF;
+  background-color: #ff0;
   transition: width 0.5s ease; /* 로딩 바가 채워지는 속도 및 가속도 설정 */
 }
 .gnb ul li a:hover::before{
@@ -294,7 +291,7 @@ i.fa-arrow-down:hover {
 }
 
 .act2{
-  color: #FFF!important;
+  color: #ff0!important;
 }
 
 section {
