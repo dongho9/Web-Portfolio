@@ -20,16 +20,27 @@
     
 </head>
 <body>
-    <!-- 헤더영역 시작 -->
     <header>
+        <section>
         <h1>
-            <a href="index.html" title="포트폴리오 바로가기">DongHo</a>
+            <a href="index.html" title="포트폴리오 바로가기">
+                <img src="images/mainlogo.png" alt="">
+            </a>
         </h1>
-
+        <!-- <div class="background-container">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt="">
+            <div class="stars"></div>
+            <div class="twinkling"></div>
+            <div class="clouds"></div>
+             -->
         <div id="intro">
             <h2>
-                webpublisher <br>
-                portfolio
+               <p>
+                    webpublisher
+               </p> 
+               <p>
+                   portfolio
+               </p>
             </h2>
             </div>
             <div class="scroll_btn">
@@ -38,6 +49,9 @@
 
             <nav class="gnb">
                 <ul>
+                    <li>
+                        <a href="javascript:void(0);" title="프로필" class="act2">HOME</a>
+                    </li>
                     <li>
                         <a href="javascript:void(0);" title="프로필">ABOUT</a>
                     </li>
@@ -51,7 +65,8 @@
             </nav>
             <div class="c_box">
                 <a href="mailto:donghobridge@google.com" title="contactbtn" class="c_btn">CONTACT</a>
-            </div>
+            </div>  
+          </section>
         </header>
 
 
@@ -62,12 +77,27 @@
                ABOUT
            </h2>
            <div class="myinfo">
-                <img src="images/info01.png" alt="" class="info01">
-                <img src="images/info02.png" alt="" class="info02">
+            <img src="./images/me.jpeg" alt="강동호">
             </div>
-            <!-- <div class="circle">circle</div>
-            <div class="circle2">circle</div> -->
+           <div class="info_total">
+                <div>
+                    <p>KANG DONGHO</p>
+                    <p class="name">강 동 호</p>
+                    <p>2000. 11. 13</p>
+                    <p>Phone. 010 - 4952 - 4828</p>
+                    <p>Email. donghobridge@gmail.com</p>
+                </div>
+                <div>
+                    <h3>SKILLS</h3>
+                    <div class="skill">
+                        <img src="./images/skill.png" alt="">
+                    </div>
+                </div>
+           </div>
+
         </section>
+
+
         <section id="pr1">
             <h2>
             </h2>
@@ -120,7 +150,7 @@
                         web
                     </h4>
                     <p class="sn">소노호텔&리조트 소속의 초대형 리조트</p>
-                    <a href="https://dongho9.github.io/Harim/" title="바로가기" class="site_btn">
+                    <a href="https://dongho9.github.io/Vivaldi-Park/" title="바로가기" class="site_btn">
                         Go Site
                     </a>
                     <a href="https://github.com/dongho9/NewBalance-Responsive" title="깃허브바로가기" class="code_btn">
@@ -151,7 +181,7 @@
                     </h4>
                     
                     <p class="sn">반려견 반려묘를 위한 펫푸드샵</p>
-                    <a href="https://dongho9.github.io/NewBalance-Responsive/" title="바로가기" class="site_btn">
+                    <a href="https://dongho9.github.io/Harim/" title="바로가기" class="site_btn">
                         Go Site
                     </a>
                     <a href="https://github.com/dongho9/NewBalance-Responsive" title="깃허브바로가기" class="code_btn">
@@ -179,22 +209,17 @@
                     </div>
                 </li>
                 <li>
+                    <h3>추가예정</h3>
                     <div class="bgc bgc2"></div>
                     <div class="c_info">
-                        <a href="#" title="뭐야">GO SITE</a>
+                        <h4>추가예정</h4>
+                        <a href="https://dongho9.github.io/Animal/" title="뭐야">GO SITE</a>
                         <a href="#" title="뭐야">CODE REVIEW</a>
-                    </div>
-                </li>
-                <li>
-                    <div class="bgc bgc3"></div>
-                    <div class="c_info">
-                        <a href="#" title="뭐야">GO SITE</a>
-                        <a href="#" title="뭐야">CODE REVIEW</a>
-                    </div>
+                    </div>    
                 </li>
                 <li>
                     <img src="images/animallogo.png" alt="" class="re">
-                    <div class=" bgc bgc4"></div>
+                    <div class=" bgc bgc3"></div>
                     <div class="c_info">
                         <a href="https://dongho9.github.io/Animal/" title="뭐야">GO SITE</a>
                         <a href="#" title="뭐야">CODE REVIEW</a>
@@ -232,9 +257,9 @@
     <script>
     $(document).ready(function(){
         // 제목 날아오게하기
-        $('#intro h2').animate({'left': '5%'},800);
-        $('#intro h2').addClass('ani01');
-        $('.scroll_btn').addClass('ani02');
+        // $('#intro h2').animate({'left': '5%'},800);
+        // $('#intro h2').addClass('ani01');
+        $('.scroll_btn').addClass('sbtn');
         const i01 = $('.info01');
         const i02 = $('.info02');
         $('.scroll_btn').click(function(){
@@ -245,7 +270,7 @@
         $(window).scroll(function(){
             // 스크롤값 구하기
             let sPos =  Math.floor($(this).scrollTop());
-            let i = $('main section').index();
+            let i = $('section').index();
             console.log(sPos);
             //스크롤값 구해서 1010이상이면 내비게이션 상단에 고정
             if(sPos<1010){
@@ -263,41 +288,13 @@
                 $('.circle2').css('opacity', '1');
                 $('.circle').animate({"left":'-400px'},500)
                 $('.circle2').animate({"right":'-300px'},500)
-                // $('#about').css('background-color', 'linear-gradient(120deg, rgba(238,174,202,1) 50%, rgba(148,187,233,1) 50%);')
-                // $('#about h2').css('color', '#fff');
-                // $('.myinfo').css('color', '#fff');
+                
                 $('.myinfo').css('opacity','1');
-                // $('.gnb ul li a').css('color', '#fff');
-                // $('.gnb').css('border-top', '3px solid #fff');
-                // $('.gnb').css('border-bottom', '3px solid #fff');
-                // $('header h1 a').css('color', '#fff');
-                // $('.c_btn').css('color', '#fff');
-                // $('.c_btn').css('border', '3px solid #fff');
             }else{
-                // i01.css('opacity','1');
-                // i02.css('opacity','1');
                 $('.myinfo').css('opacity','1');
-                // $('body').css('background-color' ,'#fff');
-                // $('#about h2').css('color', '#000');
-                // $('.myinfo').css('color', '#000'); 
-                // $('.gnb ul li a').css('color', '#000');
-                // $('.gnb').css('border-top', '3px solid #000');
-                // $('.gnb').css('border-bottom', '3px solid #000');
-                // $('header h1 a').css('color', '#000');
-                // $('.c_btn').css('border', '3px solid #000');
-                // $('.c_btn').css('color','#000');
             }
 
-            // if(sPos>=1600){
-            //     $('.t01').animate({"opacity" : "1"},1000); // 0.5초 후에 애니메이션 실행
-            // }
-            // if(sPos>=2100){
-            //     $('.t02').animate({"opacity" : "1"},1000);
-            // }
-            // if(sPos>=2600){
-            //     $('.t03').animate({"opacity" : "1"},1000);
-            // }
-            $('main section').each(function(){
+            $('section').each(function(){
 
                 let top = $(this).offset().top-600;
                 // section에 각각 offset().top이 0일때 
@@ -315,7 +312,7 @@
                 e.preventDefault();
             let i = $(this).index();
             console.log(i);
-            $('html, body').stop().animate({scrollTop:$('main section').eq(i).offset().top},500,'easeOutQuint');
+            $('html, body').stop().animate({scrollTop:$('section').eq(i).offset().top},500,'easeOutQuint');
             return false;
         });
     
