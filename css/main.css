@@ -113,17 +113,18 @@ h1 img {
   text-align: center;
   height: 40px;
   z-index: 1000;
-  color: #000;
+  color: #fff;
   position: fixed;
   top: 4%;
   right: 5%;
-  border: 3px solid #334535;
+  border: 3px solid #fff;
   font: 700 20px/40px "Nanum Myeong jo"; /*축약법 - 굵기 크기/줄간격 끌꼴*/
   transition: 0.5s;
+  background-color: #000;
 }
 
 .c_btn:hover {
-  background-color: #334535;
+  background-color: #000;
   color: #fff !important;
 }
 
@@ -135,8 +136,9 @@ h1 img {
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
-  color: #334535;
+  color: #fff;
   text-align: center;
+  z-index: 3;
 }
 
 #intro h2 p:last-child {
@@ -183,13 +185,13 @@ i.fa-arrow-down {
   text-align: center;
   line-height: 150px;
   border-radius: 50%;
-  border: 1px solid #334535;
+  border: 1px solid #fff;
   transition: 0.5s;
-  color: #334535;
+  color: #fff;
 }
 
 i.fa-arrow-down:hover {
-  background-color: #334535;
+  background-color: #000;
   color: #fff;
 }
 
@@ -203,8 +205,8 @@ i.fa-arrow-down:hover {
   width: 90%;
   position: fixed;
   z-index: 100;
-  border-top: 3px solid #334535;
-  border-bottom: 3px solid #334535;
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff;
 }
 
 .gnb ul {
@@ -237,7 +239,7 @@ i.fa-arrow-down:hover {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #03C75A;
+  background-color: #FFF;
   transition: width 0.5s ease; /* 로딩 바가 채워지는 속도 및 가속도 설정 */
 }
 
@@ -251,7 +253,7 @@ i.fa-arrow-down:hover {
 }
 
 .act2 {
-  color: #03C75A !important;
+  color: #FFF !important;
 }
 
 section {
