@@ -8,25 +8,32 @@ $en: "Lobster", sans-serif;
 $basecolor:#252525;
 $basecolor2:#fff;
 // 헤더영역
+html{
+  overflow-x: hidden;
+}
 body{
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 .en{
     font-family: $en;
+}
+.br{
+  display: none;
 }
 .innerHeader{
     top: 0;
     left: 0;
     width: 100%;
-    height: 80px;
+    height: 90px;
     position: absolute;
     background-color: transparent;
     z-index: 100;
-    padding: 30px 60px;
+    padding: 20px 60px;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     background-color: rgba(0,0,0,0.5);
+    // background-color: #ccc;
     position: fixed;
     transition: 0.5s;
 }
@@ -97,7 +104,7 @@ h1 a{
   border: 0;
   background: none;
   cursor: pointer;
-  transform: translateY(15px);
+  transform: translateY(10px);
 }
 .gnbtoggle::before{
   display: block;
@@ -506,7 +513,7 @@ footer .bottom{
 
 @media screen and (max-width: 800px){
   .innerHeader{
-    padding: 30px 5%;
+    padding: 20px 5%;
   }
   .tit{
     font-size: 100px;
@@ -540,4 +547,41 @@ footer .bottom{
     margin-top: -30px;
     font-size: 45px;
   }
+}
+
+@media screen and (max-width: 400px){
+  .innerHeader{
+    height: 60px;
+  }
+  .br{
+    display: block;
+  }
+  .tit{
+    font-size: 60px;
+    padding-left: 40px;
+    line-height: 70px;
+  }
+  .tit span:first-child {
+    margin-bottom: 0px;
+}
+.title p {
+  font-size: 60px;
+}
+.skill li, .mask li {
+  font-size: 50px;
+}
+footer .textwrap {
+  padding: 0 0 0 5%;
+}
+.textwrap a {
+  display: block;
+  margin-top: -30px;
+  font-size: 30px;
+}
+.sns li a{
+  font-size: 20px;
+}
+.copyright{
+  font-size: 20px;
+}
 }
