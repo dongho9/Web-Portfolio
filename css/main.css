@@ -33,38 +33,69 @@ body {
 h1 {
   width: 100%;
   position: relative;
-  z-index: -300;
+  z-index: 10;
 }
 
 h1 a {
-  font-size: 60px;
+  font-size: 40px;
   color: #fff;
 }
 
-.gnb {
-  transition: 0.5s;
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: 0;
-  display: none;
-}
-
-.gnb::before {
-  content: "";
-  display: block;
-  position: fixed;
-  left: 0;
-  top: 0;
+.gnbwrap {
   width: 100%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: 0.5s;
-  z-index: -200;
+  position: absolute;
+  left: 0;
+  top: -2000%;
+  transition: top 0.6s;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+}
+
+.gnbtop {
+  top: 0;
 }
 
 .no-scroll {
   overflow: hidden;
+}
+
+.blur {
+  filter: blur(10px);
+}
+
+.gnb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gnb li {
+  line-height: 1.5;
+}
+
+.gnb li a {
+  font-size: 100px;
+  display: block;
+  text-transform: uppercase;
+}
+
+.gnb li a::after {
+  transition: 0.3s;
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+}
+
+.gnb li a:hover::after {
+  width: 100%;
+}
+
+.gnb li a:hover {
+  padding-left: 20px;
 }
 
 .gnbtoggle {
@@ -101,6 +132,16 @@ h1 a {
   bottom: 11px;
 }
 
+.gnbtoggle.close::before {
+  top: 15px;
+  transform: rotate(-135deg);
+}
+
+.gnbtoggle.close::after {
+  bottom: 15px;
+  transform: rotate(135deg);
+}
+
 .s_title {
   display: none;
 }
@@ -110,18 +151,16 @@ h1 a {
   width: 100%;
   height: 100vh;
   background-color: #000;
-  box-sizing: border-box;
 }
 
 .tit {
   position: absolute;
-  left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
   font-size: 60px;
   color: #fff;
   font-family: "Fraunces", serif;
-  font-size: 250px;
+  font-size: 200px;
   width: 100%;
   padding-left: 60px;
 }
@@ -139,6 +178,7 @@ h1 a {
 }
 
 .tit.motion span {
+  width: 100%;
   overflow: hidden;
   transform: translate3d(0, 0, 0) skewY(0deg);
 }
@@ -361,10 +401,6 @@ h1 a {
   position: relative;
 }
 
-.con03 > h2 {
-  display: none;
-}
-
 .skillBox {
   width: 100%;
   height: 80vh;
@@ -419,7 +455,7 @@ h1 a {
 }
 
 .con03.motion .simply-scroll .simply-scroll-clip {
-  transform: rotate(5deg) translate(0%, -400px) scale(1.1);
+  transform: rotate(5deg) translate(-5%, -400px) scale(1.1);
   opacity: 1;
   transition: 1.2s;
   transition-delay: 0.3s;
@@ -478,4 +514,70 @@ footer .bottom {
 
 .sns li {
   margin-right: 30px;
+}
+
+@media screen and (max-width: 1220px) {
+  .tit {
+    font-size: 150px;
+  }
+  .skill li, .mask li {
+    font-size: 65px;
+  }
+  .con03 {
+    padding-top: 150px;
+  }
+  .imgBox::after, .imgBox::before {
+    display: none;
+  }
+  .worklist li a:hover .imgBox img {
+    filter: none;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .tit {
+    font-size: 130px;
+  }
+  .con02 .worklist {
+    width: 90% !important;
+  }
+  .skill li, .mask li {
+    font-size: 65px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .innerHeader {
+    padding: 30px 5%;
+  }
+  .tit {
+    font-size: 100px;
+  }
+  .gnb li a {
+    font-size: 50px;
+  }
+  .title p {
+    font-size: 100px;
+    color: #fff;
+  }
+  .worklist li {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  .skill li, .mask li {
+    font-size: 65px;
+  }
+  .textwrap .contact {
+    margin-bottom: 30px;
+  }
+  .textwrap .title {
+    padding-left: 0px;
+  }
+  .contact > span {
+    font-size: 60px;
+  }
+  .textwrap a {
+    display: block;
+    margin-top: -30px;
+    font-size: 45px;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -14,7 +14,9 @@ $(function(){
 })
 $(document).ready(function(){
     $('.gnbtoggle').click(function(){
-        $('.gnb').slideToggle();
+        $(this).toggleClass('close');
+        $('.gnbwrap').toggleClass('gnbtop');
+        $('section').toggleClass('blur');
         $('body').toggleClass('no-scroll');
     })
 })
