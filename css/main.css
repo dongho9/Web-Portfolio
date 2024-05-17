@@ -495,7 +495,7 @@ footer .textwrap {
 }
 
 .textwrap .contact {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .textwrap a {
@@ -524,7 +524,7 @@ footer .bottom {
   margin-right: 30px;
 }
 
-@media screen and (max-width: 1220px) {
+@media screen and (max-width: 1300px) {
   .tit {
     font-size: 150px;
   }
@@ -550,6 +550,12 @@ footer .bottom {
   }
   .skill li, .mask li {
     font-size: 65px;
+  }
+  .gnb li a::after {
+    display: none;
+  }
+  .gnb li a:hover {
+    padding-left: 0px;
   }
 }
 @media screen and (max-width: 800px) {
