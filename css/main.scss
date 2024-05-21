@@ -622,3 +622,24 @@ footer .textwrap {
   font-size: 20px;
 }
 }
+
+// 아이폰미니
+@media screen and (max-width: 500px){
+  .tit{
+    transform: translateY(-75%);
+  }
+  .textBox h3{
+    font-size: 22px;
+}
+
+.con03.motion .simply-scroll .simply-scroll-clip {
+  transform: rotate(5deg) translate(-10%, -450px) scale(1.1);
+  opacity: 1;
+  transition: 1.2s;
+  transition-delay: 0.3s;
+}
+.simply-scroll .simply-scroll-clip .simply-scroll-list li {
+  float: left;
+  width: 200px;
+}
+}
