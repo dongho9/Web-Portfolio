@@ -1,18 +1,17 @@
-// 01.header영역 스크롤이벤트
 $(function(){
     var prevScrollTop = 0;
     document.addEventListener("scroll", function(){
-        var nowscrollTop = $(window).scrollTop();
-        console.log(nowscrollTop);
-        if(nowscrollTop > prevScrollTop){
+        var nowScrollY = window.scrollY;
+        console.log(nowScrollY);
+        if(nowScrollY > prevScrollTop){
             $('.innerHeader').addClass('active');
-        }else{
+        } else {
             $('.innerHeader').removeClass('active');
         }
-        if(nowscrollTop === 0){
+        if(nowScrollY === 0){
             $('.innerHeader').removeClass('active');
         }
-        prevScrollTop = nowscrollTop;
+        prevScrollTop = nowScrollY;
     })
 })
 $(document).on('click', 'a[href="#"]',function(e) {e.preventDefault
