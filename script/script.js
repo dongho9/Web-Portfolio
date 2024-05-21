@@ -17,45 +17,7 @@ $(function(){
 
 $(document).on('click', 'a[href="#"]',function(e) {e.preventDefault
     ();})
-    
- $(document).ready(function(){
-        $('.m_home').click(function(){
-            $('.gnbwrap').removeClass('gnbtop');
-            $('.gnbtoggle').removeClass('close');
-            $('section').removeClass('blur');
-            $('html, body').animate({
-                scrollTop: 0 // 이동할 스크롤 높이 (예: 790px)
-            }, 500); // 스크롤 애니메이션 시간 (300밀리초)
-        });
-    });
-    $(document).ready(function(){
-        $('.m_work').click(function(){
-            $('.gnbwrap').removeClass('gnbtop');
-            $('.gnbtoggle').removeClass('close');
-            $('section').removeClass('blur');
-            $('html, body').animate({
-                scrollTop: 760 // 이동할 스크롤 높이 (예: 790px)
-            }, 500); // 스크롤 애니메이션 시간 (300밀리초)
-        });
-    });
-    $(document).ready(function(){
-        $('.m_about').click(function(){
-            $('.gnbwrap').removeClass('gnbtop');
-            $('.gnbtoggle').removeClass('close');
-            $('section').removeClass('blur');
-            if (window.innerWidth <= 768) {
-                // 모바일 버전에서는 다른 높이로 스크롤
-                $('html, body').animate({
-                    scrollTop: 6400 // 모바일에서의 스크롤 높이
-                }, 300);
-            } else {
-                // 데스크탑 버전에서는 기본 높이로 스크롤
-                $('html, body').animate({
-                    scrollTop: 4600 // 이동할 스크롤 높이 (예: 790px)
-                }, 300); // 스크롤 애니메이션 시간 (300밀리초)
-            }
-        });
-    });
+
 $(document).ready(function(){
     $('.gnbtoggle').click(function(){
         $(this).toggleClass('close');

@@ -159,7 +159,7 @@ h1 a{
     font-family: $tit;
     font-size: 200px;
     width: 100%;
-    padding-left: 60px;
+    padding-left: 5%;
 }
 .tit span{
     display: inline-block;
@@ -575,8 +575,35 @@ footer .bottom{
     font-size: 24px;
   }
 }
-
-@media screen and (max-width: 500px){
+@media screen and (max-width: 430px){
+  .tit{
+    font-size: 80px;
+    transform: translateY(-100%);
+  }
+  .gnb{
+    top: 40%;
+  }
+  .a,.b{
+    font-size: 80px !important;
+  }
+  .skill li, .container li{
+    font-size: 50px;
+  }
+  .con03.motion .simply-scroll .simply-scroll-clip {
+    transform: rotate(5deg) translate(-10%, -550px) scale(1.1);
+    opacity: 1;
+    transition: 1.2s;
+    transition-delay: 0.3s;
+  }
+  .simply-scroll .simply-scroll-clip .simply-scroll-list li {
+    float: left;
+    width: 200px;
+  }
+  .textwrap a {
+    font-size: 38px;
+  }
+}
+@media screen and (max-width: 390px){
   .innerHeader{
     height: 60px;
     padding: 13px 5%;
@@ -624,14 +651,16 @@ footer .textwrap {
 }
 
 // 아이폰미니
-@media screen and (max-width: 500px){
+@media screen and (max-width: 360px){
   .tit{
     transform: translateY(-75%);
+  }
+  .gnb{
+    top: 40%;
   }
   .textBox h3{
     font-size: 22px;
 }
-
 .con03.motion .simply-scroll .simply-scroll-clip {
   transform: rotate(5deg) translate(-10%, -450px) scale(1.1);
   opacity: 1;
