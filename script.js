@@ -1,19 +1,20 @@
 $(function(){
     var prevScrollTop = 0;
-    document.addEventListener("scroll", function(){
-        var nowScrollY = window.scrollY;
-        console.log(nowScrollY);
-        if(nowScrollY > prevScrollTop){
+    $(window).on("scroll", function(){
+        var nowScrollTop = $(window).scrollTop();
+        // console.log(nowScrollTop);
+        if(nowScrollTop > prevScrollTop){
             $('.innerHeader').addClass('active');
         } else {
             $('.innerHeader').removeClass('active');
         }
-        if(nowScrollY === 0){
+        if(nowScrollTop === 0){
             $('.innerHeader').removeClass('active');
         }
-        prevScrollTop = nowScrollY;
-    })
-})
+        prevScrollTop = nowScrollTop;
+    });
+});
+
 $(document).on('click', 'a[href="#"]',function(e) {e.preventDefault
     ();})
     
