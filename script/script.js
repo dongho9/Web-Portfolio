@@ -56,9 +56,9 @@ $(document).on('click', 'a[href="#"]',function(e) {e.preventDefault
 $(document).ready(function(){
     $('.gnbtoggle').click(function(){
         $(this).toggleClass('close');
+        $('html, body').toggleClass('no-scroll');
         $('.gnbwrap').toggleClass('gnbtop');
         $('section').toggleClass('blur');
-        $('body').toggleClass('no-scroll');
     })
 })
 $(document).ready(function(){
