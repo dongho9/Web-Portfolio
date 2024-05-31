@@ -31,7 +31,7 @@ body.no-scroll .innerHeader.active {
   position: fixed;
   background-color: transparent;
   z-index: 100;
-  padding: 20px 60px;
+  padding: 20px 5%;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -232,7 +232,7 @@ h1 a {
   font-size: 170px;
   line-height: 0.9;
   text-align: center;
-  padding-top: 30vh;
+  padding-top: 40vh;
   box-sizing: border-box;
 }
 
@@ -422,14 +422,15 @@ h1 a {
 .skillBox {
   width: 100%;
   height: 80vh;
-  font-size: 5vw;
+  font-size: 4vw;
   color: #fff;
   line-height: 1.1;
   letter-spacing: -1px;
   font-family: "Sriracha", cursive;
   font-style: italic;
   position: relative;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: 1;
 }
 
@@ -463,7 +464,7 @@ h1 a {
 
 .simply-scroll .simply-scroll-clip {
   overflow: hidden;
-  transform: rotate(5deg) translate(150%, 400px) scale(1.1);
+  transform: rotate(5deg) translate(150%, 50%) scale(1.1);
   opacity: 0;
   filter: brightness(50%);
 }
@@ -473,7 +474,7 @@ h1 a {
 }
 
 .con03.motion .simply-scroll .simply-scroll-clip {
-  transform: rotate(5deg) translate(-5%, -400px) scale(1.1);
+  transform: rotate(5deg) translate(-5%, -120%) scale(1.1);
   opacity: 1;
   transition: 1.2s;
   transition-delay: 0.3s;
@@ -495,7 +496,8 @@ footer .textwrap {
   font-size: 100px;
   line-height: 1;
   letter-spacing: -1px;
-  top: 25%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .textwrap .title {
@@ -540,9 +542,6 @@ footer .bottom {
   }
   .skill li, .mask li {
     font-size: 65px;
-  }
-  .con03 {
-    padding-top: 150px;
   }
   .imgBox::after, .imgBox::before {
     display: none;
@@ -613,6 +612,9 @@ footer .bottom {
   .sns li {
     font-size: 24px;
   }
+  .con03.motion .simply-scroll .simply-scroll-clip {
+    transform: rotate(5deg) translate(-10%, -180%) scale(1.1);
+  }
   .copyright {
     text-align: right;
     font-size: 24px;
@@ -633,7 +635,7 @@ footer .bottom {
     font-size: 50px;
   }
   .con03.motion .simply-scroll .simply-scroll-clip {
-    transform: rotate(5deg) translate(-10%, -550px) scale(1.1);
+    transform: rotate(5deg) translate(-10%, -150%) scale(1.1);
     opacity: 1;
     transition: 1.2s;
     transition-delay: 0.3s;
@@ -654,6 +656,10 @@ footer .bottom {
   h1 a {
     font-size: 30px;
   }
+  h2.tit {
+    top: 50%;
+    transform: translateY(-50%);
+  }
   .gnbtoggle {
     width: 32px;
     height: 32px;
@@ -667,7 +673,7 @@ footer .bottom {
   }
   .tit {
     font-size: 60px;
-    padding-left: 40px;
+    padding-left: 5%;
     line-height: 70px;
   }
   .title p {
@@ -678,6 +684,8 @@ footer .bottom {
   }
   footer .textwrap {
     padding: 0 0 0 5%;
+    top: 50%;
+    transform: translateY(-50%);
   }
   .textwrap a {
     display: block;
@@ -701,8 +709,11 @@ footer .bottom {
   .textBox h3 {
     font-size: 22px;
   }
+  .con03 {
+    padding-top: 0;
+  }
   .con03.motion .simply-scroll .simply-scroll-clip {
-    transform: rotate(5deg) translate(-10%, -450px) scale(1.1);
+    transform: rotate(5deg) translate(-10%, -300%) scale(1.1);
     opacity: 1;
     transition: 1.2s;
     transition-delay: 0.3s;
