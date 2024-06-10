@@ -326,6 +326,10 @@ h1 a {
   color: #fff;
 }
 
+.info {
+  line-height: 20px;
+}
+
 .info span b {
   display: inline-block;
   color: #888;
@@ -412,74 +416,6 @@ h1 a {
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
-.con03 {
-  background-color: #000;
-  width: 100%;
-  height: 100vh;
-  position: relative;
-}
-
-.skillBox {
-  width: 100%;
-  height: 80vh;
-  font-size: 4vw;
-  color: #fff;
-  line-height: 1.1;
-  letter-spacing: -1px;
-  font-family: "Sriracha", cursive;
-  font-style: italic;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-}
-
-.skillBox ul {
-  position: absolute;
-  top: 0;
-  left: 5%;
-}
-
-.skill {
-  color: transparent;
-  -webkit-text-stroke: 1px #b1dd40;
-}
-
-.container {
-  height: 80px;
-  outline: 1px transparent;
-  overflow: hidden;
-}
-
-.mask {
-  color: #b1dd40;
-  -webkit-text-stroke: none;
-}
-
-/* simplyScroll */
-.simply-scroll .simply-scroll-clip .simply-scroll-list li {
-  float: left;
-  width: 400px;
-}
-
-.simply-scroll .simply-scroll-clip {
-  overflow: hidden;
-  transform: rotate(5deg) translate(150%, 50%) scale(1.1);
-  opacity: 0;
-  filter: brightness(50%);
-}
-
-.simply-scroll .simply-scroll-clip .simply-scroll-list img {
-  width: 100%;
-}
-
-.con03.motion .simply-scroll .simply-scroll-clip {
-  transform: rotate(5deg) translate(-5%, -120%) scale(1.1);
-  opacity: 1;
-  transition: 1.2s;
-  transition-delay: 0.3s;
-}
-
 footer {
   background-color: #000 !important;
   width: 100%;

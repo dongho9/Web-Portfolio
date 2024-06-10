@@ -70,22 +70,6 @@ $(function(){
     .fromTo('.b', {x:'100%'},{x:'0%', ease:'none', duration:5},0)
 })
 
-$(function(){
-    const container = document.querySelector(".container");
-    document.body.addEventListener('mousemove', e => {
-        const x = e.clientX;
-        const y = e.clientY;
-    
-        gsap.to(container,{
-            y: y
-        })
-        gsap.to('.mask',{
-            y: -y
-        })
-    })
-
-})
-
 
 $(function(){
     $('.con03 .list').simplyScroll({
