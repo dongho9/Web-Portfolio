@@ -70,11 +70,64 @@ $(function(){
     .fromTo('.b', {x:'100%'},{x:'0%', ease:'none', duration:5},0)
 })
 
-
+// .con02 시작할 때 타이틀 화면밖에서 안으로 들어오기 
 $(function(){
-    $('.con03 .list').simplyScroll({
-        speed:4,
-        pauseonHover:false,
-        pauseonTouch:false,
+    gsap.timeline({
+        scrollTrigger:{
+            trigger:'.con03',
+            start:'20% 100%',
+            end:'0% 20%',
+            scrub:1,
+            // markers:true
+        }
     })
+    .fromTo('.wrap', {background:'#F6F3EA'},{background:'#1c1515', ease:'none', duration:3},0)
+    .fromTo(
+        '.innerHeader',
+        { backgroundColor: 'rgba(246, 243, 234, 0.8)' }, // 시작 색상
+        { backgroundColor: 'rgba(28, 21, 21, 0.8)', ease: 'none', duration: 3},0 // 끝 색상, 애니메이션 설정
+      )
+      .fromTo('.a', {x:'100%'},{x:'0%', ease:'none', duration:5},0)
+      .fromTo('.b', {x:'-100%'},{x:'0%', ease:'none', duration:5},0)
 })
+    
+$(function() {
+    let activeImage;
+    let setX, setY;
+
+    gsap.utils.toArray('.con03 ul li a').forEach((elem) => {
+        let image = elem.querySelector('.fadeImg');
+
+        let align = e => {
+            setX(e.clientX);
+            setY(e.clientY);
+        };
+
+        let startPoint = () => document.addEventListener('mousemove', align);
+        let stopPoint = () => document.removeEventListener('mousemove', align);
+
+        let fade = gsap.to(image, { autoAlpha: 0.8, ease: 'none', paused: true });
+
+        elem.addEventListener('mouseenter', (e) => {
+            fade.play();
+            startPoint();
+
+            if (activeImage) {
+                gsap.set(image, {
+                    x: gsap.getProperty(activeImage, "x"),
+                    y: gsap.getProperty(activeImage, "y")
+                });
+            }
+            activeImage = image;
+            setX = gsap.quickTo(image, "x", { duration: 0.5, ease: Elastic});
+            setY = gsap.quickTo(image, "y", { duration: 0.5, ease: Elastic});
+
+            align(e);
+        });
+
+        elem.addEventListener('mouseleave', () => {
+            fade.reverse();
+            stopPoint();
+        });
+    });
+});

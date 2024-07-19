@@ -3,19 +3,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital@1&family=Public+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 $none:none;
 $tit: "Fraunces", serif;
 $en: "Lobster", sans-serif;
 $basecolor:#252525;
-$basecolor2:#fff;
+$basecolor2:#dd4345;
 // 헤더영역
 html{
   overflow-x: hidden;
 }
 body{
   overflow-x: hidden;
-  background-color: #000 !important;
 } 
+body::-webkit-scrollbar{
+  width: 12px;
+  height: 12px;
+  background-color: transparent !important;
+}
+body::-webkit-scrollbar-thumb{
+  outline: none;
+  border-radius: 10px;
+  background-color: $basecolor2;
+  /* box-shadow 색상은 지정 안했을 경우 기본적으로 color 값을 따라감 */
+}
+body::-webkit-scrollbar-track {
+  background-color: #F6F3EA;
+}
+.wrap{
+  background-color: #F6F3EA;
+}
 body.no-scroll .innerHeader.active{
   transform: none;
 }
@@ -31,15 +48,13 @@ body.no-scroll .innerHeader.active{
     width: 100%;
     height: 90px;
     position: fixed;
-    background-color: transparent;
     z-index: 100;
     padding: 20px 5%;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
-    background-color: rgba(0,0,0,0.5);
-    // background-color: #ccc;
     transition: 0.5s;
+    background: rgba(246, 243, 234, 0.8);
 }
 .active{
   transform: translateY(-100%);
@@ -61,7 +76,7 @@ h1 a{
   left: 0;
   top: -2000%;
   transition: top 0.6s;
-  background-color: rgba(0,0,0,0.8);
+  background: rgba(246, 243, 234, 0.8);
   z-index: -1;
 }
 .gnbtop{
@@ -86,6 +101,7 @@ h1 a{
   font-size: 100px;
   display: block;
   text-transform: uppercase;
+  color: $basecolor2;
 }
 .gnb li a::after{
   transition: 0.3s;
@@ -93,7 +109,7 @@ h1 a{
   display: block;
   width: 0%;
   height: 2px;
-  background-color: #fff;
+  background-color: $basecolor2;
 }
 .gnb li a:hover::after{
   width: 100%;
@@ -116,7 +132,7 @@ h1 a{
   left: 0;
   width: 32px;
   height: 2px;
-  background: #fff;
+  background: $basecolor2;
   content: '';
   transition: transform 0.3s;
   top: 11px;
@@ -127,7 +143,7 @@ h1 a{
   left: 0;
   width: 32px;
   height: 2px;
-  background: #fff;
+  background: $basecolor2;
   content: '';
   transition: transform 0.3s;
   bottom: 11px;
@@ -148,7 +164,7 @@ h1 a{
     position: relative;
     width: 100%;
     height: 100vh;
-    background-color: #000;
+    z-index: 10;
 }
 .tit{
     position: absolute;
@@ -190,7 +206,7 @@ h1 a{
           transform-origin: top left;
       }
     } 
-    .con02 > h2{
+    .con02 > h2, .con03 > h2{
       display: none;
     }
     .b{
@@ -198,10 +214,11 @@ h1 a{
       font-style: italic;
     }
     .con02{
-      background-color: #000;
       padding-bottom: 100px;
+      position: relative;
+      z-index: 11;
     }
-    .con02 .title{
+    .con02 .title, .con03 .title{
       width: 100%;
       height: 100vh;
       font-size: 170px;
@@ -244,7 +261,7 @@ h1 a{
     }
     .title p{
       font-size: 150px;
-      color: #fff;
+      color: $basecolor2;
     }
     .worklist{
       width: 70%;
@@ -287,15 +304,18 @@ h1 a{
     .textBox h3{
       font-size: 35px;
       font-weight: normal;
-      margin: 20px 0px 5px;
-      color: #fff;
+      margin: 20px 0px 10px;
+      color: $basecolor2;
     }
     .info{
-      line-height: 20px;
+      line-height: 25px;
     }
     .info span b{
       display: inline-block;
-      color: #888;
+      color: #000000;
+      font-family: "Noto Sans KR", sans-serif;
+      font-style: normal;
+      font-weight: 600;
     }
     .info p:last-child{
       float: right;
@@ -379,9 +399,59 @@ h1 a{
       }
     }
 
+    .con03{
+      width: 100%;
+      text-align: center;
+    }
+    .con03 .title{
+      z-index: 11;
+      position: relative;
+    }
+    .con03_inner{
+      width: 45%;
+      margin: 0 auto;
+    }
+    .con03_inner ul li{
+      margin-bottom: 80px;
+    }
+    .con03_inner ul li a{
+      color: #fff;
+      display: block;
+      width: 100%;
+      height: 100%;
+      font-size: 110px;
+      letter-spacing: -1px;
+      font-weight: bold;
+      transition: all 0.5s ease-in-out;
+      opacity: 1;
+      font-family: $tit;
+      font-style: italic;
+      text-align: center;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .fadeImg{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 350px;
+      height: 220px;
+      object-fit: cover;
+      filter: brightness(30%);
+      opacity: 0;
+    }
+    .color{
+      opacity: 0.7;
+      transition: all 0.3s ease-in-out;
+    }
+    .color:hover{
+      color: $basecolor2;
+      font-size: 115px;
+    }
 // 푸터영역
 footer{
-    background-color: #000 !important;
     width: 100%;
     height: 100vh;
     position: relative;
@@ -422,26 +492,44 @@ footer .bottom{
     letter-spacing: -1px;
     color: #fff;
 }
+.mail{
+  color: #fff;
+}
 .sns{
     display: flex;
 }
 .sns li{
     margin-right: 30px;
 }
-
+.sns li a{
+  color: #fff;
+}
 
 @media screen and (max-width: 1300px){
   .tit{
     font-size: 150px;
   }
-  .skill li, .mask li{
-    font-size: 65px;
+  .gnb li a{
+    font-size: 70px;
   }
   .imgBox::after, .imgBox::before{
     display: none;
   }
   .worklist li a:hover .imgBox img{
     filter: none;
+  }
+  .color:hover{
+    color: #fff;
+    font-size: 80px;
+  }
+  .color{
+    font-size: 80px;
+  }
+  .fadeImg{
+    display: none;
+  }
+  .mail{
+    font-size: 90px;
   }
 }
 @media screen and (max-width: 1024px){
@@ -451,14 +539,17 @@ footer .bottom{
     .con02 .worklist{
         width: 90% !important;
     }
-    .skill li, .mask li{
-      font-size: 65px;
+    .gnb li a{
+      font-size: 60px;
     }
     .gnb li a::after{
       display: none;
     }
     .gnb li a:hover{
       padding-left: 0px;
+    }
+    .mail{
+      font-size: 70px;
     }
 }
 
@@ -479,7 +570,6 @@ footer .bottom{
 }
   .title p {
     font-size: 100px;
-    color: #fff;
   }
   .worklist li{
     width: 100%;
@@ -489,14 +579,17 @@ footer .bottom{
   .textBox h3{
     font-size: 28px;
 }
-  .skill li, .mask li{
-    font-size: 65px;
-  }
   .textwrap .contact {
     margin-bottom: 30px;
   }
   .textwrap .title {
     padding-left: 0px;
+  }
+  .color{
+    font-size: 60px;
+  }
+  .color:hover{
+    font-size: 60px;
   }
   .contact > span{
     font-size: 60px;
@@ -509,9 +602,6 @@ footer .bottom{
   .sns li{
     font-size: 24px;
   }
-  .con03.motion .simply-scroll .simply-scroll-clip {
-    transform: rotate(5deg) translate(-10%, -180%) scale(1.1);
-  }
   .copyright{
     text-align: right;
     font-size: 24px;
@@ -520,29 +610,25 @@ footer .bottom{
 @media screen and (max-width: 430px){
   .tit{
     font-size: 80px;
-    transform: translateY(-100%);
+    transform: translateY(-50%);
   }
   .gnb{
-    top: 40%;
+    top: 50%;
   }
   .a,.b{
     font-size: 80px !important;
   }
-  .skill li, .container li{
-    font-size: 50px;
-  }
-  .con03.motion .simply-scroll .simply-scroll-clip {
-    transform: rotate(5deg) translate(-10%, -150%) scale(1.1);
-    opacity: 1;
-    transition: 1.2s;
-    transition-delay: 0.3s;
-  }
-  .simply-scroll .simply-scroll-clip .simply-scroll-list li {
-    float: left;
-    width: 200px;
-  }
   .textwrap a {
     font-size: 38px;
+  }
+  .color{
+    font-size: 40px;
+  }
+  .color:hover{
+    font-size: 40px;
+  }
+  .info span b {
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 390px){
@@ -597,6 +683,9 @@ footer .textwrap {
 .copyright{
   font-size: 20px;
 }
+.info span b {
+  font-size: 13px;
+}
 }
 
 // 아이폰미니
@@ -610,17 +699,5 @@ footer .textwrap {
   .textBox h3{
     font-size: 22px;
 }
-.con03{
-  padding-top: 0;
-}
-.con03.motion .simply-scroll .simply-scroll-clip {
-  transform: rotate(5deg) translate(-10%, -300%) scale(1.1);
-  opacity: 1;
-  transition: 1.2s;
-  transition-delay: 0.3s;
-}
-.simply-scroll .simply-scroll-clip .simply-scroll-list li {
-  float: left;
-  width: 200px;
-}
+
 }
