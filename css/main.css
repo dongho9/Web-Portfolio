@@ -110,7 +110,7 @@ h1 a {
 }
 
 .gnb li a {
-  font-size: 100px;
+  font-size: 80px;
   display: block;
   text-transform: uppercase;
   color: #dd4345;
@@ -208,7 +208,16 @@ h1 a {
   margin-bottom: 20px;
 }
 
-.tit span:last-child {
+.tit span:nth-child(2) {
+  font-style: italic;
+}
+
+.tit span:nth-child(3) {
+  display: none;
+}
+
+.tit span:nth-child(4), .tit span:last-child {
+  display: none;
   font-style: italic;
 }
 
@@ -612,7 +621,7 @@ footer .bottom {
     font-size: 70px;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
   .innerHeader {
     padding: 20px 5%;
   }
@@ -634,7 +643,7 @@ footer .bottom {
     margin-bottom: 30px;
   }
   .textBox h3 {
-    font-size: 28px;
+    font-size: 24px !important;
   }
   .textwrap .contact {
     margin-bottom: 30px;
@@ -664,9 +673,30 @@ footer .bottom {
     font-size: 24px;
   }
 }
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 660px) {
+  .tit {
+    font-size: 90px !important;
+    display: block;
+    text-align: center;
+    padding: 0;
+    line-height: 120px;
+  }
+  .tit span:first-child, .tit span:nth-child(2) {
+    display: none;
+  }
+  .tit span:nth-child(3), .tit span:nth-child(4), .tit span:last-child {
+    display: block;
+  }
+}
+@media screen and (max-width: 570px) {
   .tit {
     font-size: 80px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .tit {
+    font-size: 75px !important;
+    line-height: 100px;
     transform: translateY(-50%);
   }
   .gnb {
@@ -696,9 +726,9 @@ footer .bottom {
   h1 a {
     font-size: 30px;
   }
-  h2.tit {
-    top: 50%;
-    transform: translateY(-50%);
+  .tit {
+    font-size: 70px !important;
+    line-height: 80px !important;
   }
   .gnbtoggle {
     width: 32px;
@@ -713,8 +743,6 @@ footer .bottom {
   }
   .tit {
     font-size: 60px;
-    padding-left: 5%;
-    line-height: 70px;
   }
   .title p {
     font-size: 60px;
