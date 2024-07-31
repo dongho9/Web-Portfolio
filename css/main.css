@@ -692,6 +692,9 @@ footer .bottom {
   .tit {
     font-size: 80px;
   }
+  .gnb li a {
+    font-size: 40px !important;
+  }
 }
 @media screen and (max-width: 430px) {
   .tit {
@@ -727,8 +730,8 @@ footer .bottom {
     font-size: 30px;
   }
   .tit {
-    font-size: 70px !important;
-    line-height: 80px !important;
+    font-size: 60px !important;
+    line-height: 70px !important;
   }
   .gnbtoggle {
     width: 32px;
@@ -737,12 +740,6 @@ footer .bottom {
     background: none;
     cursor: pointer;
     transform: translateY(0px);
-  }
-  .br {
-    display: block;
-  }
-  .tit {
-    font-size: 60px;
   }
   .title p {
     font-size: 60px;
@@ -771,9 +768,6 @@ footer .bottom {
   }
 }
 @media screen and (max-width: 360px) {
-  .tit {
-    transform: translateY(-75%);
-  }
   .gnb {
     top: 40%;
   }
