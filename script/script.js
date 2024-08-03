@@ -67,14 +67,14 @@ $(document).ready(function(){
     gsap.timeline({
         scrollTrigger:{
             trigger:'.con02',
-            start:'0% 100%',
+            start:'top 100%',
             end:'0% 20%',
             scrub:1,
             // markers:true
         }
     })
-    .fromTo('.a', {x:'-100%'},{x:'0%', ease:'none', duration:5},0)
-    .fromTo('.b', {x:'100%'},{x:'0%', ease:'none', duration:5},0)
+    .fromTo('.con02 .a', {x:'-100%'},{x:'0%', ease:'none', duration:5},0)
+    .fromTo('.con02 .b', {x:'100%'},{x:'0%', ease:'none', duration:5},0)
 })
 
 // .con03 시작할 때 타이틀 화면밖에서 안으로 들어오기 
@@ -82,7 +82,7 @@ $(document).ready(function(){
     gsap.timeline({
         scrollTrigger:{
             trigger:'.con03',
-            start:'20% 100%',
+            start:'top 100%',
             end:'0% 20%',
             scrub:1,
             // markers:true
@@ -94,8 +94,8 @@ $(document).ready(function(){
         { backgroundColor: 'rgba(246, 243, 234, 0.8)' }, // 시작 색상
         { backgroundColor: 'rgba(28, 21, 21, 0.8)', ease: 'none', duration: 3},0 // 끝 색상, 애니메이션 설정
       )
-      .fromTo('.a', {x:'100%'},{x:'0%', ease:'none', duration:5},0)
-      .fromTo('.b', {x:'-100%'},{x:'0%', ease:'none', duration:5},0)
+      .fromTo('.con03 .a', {x:'100%'},{x:'0%', ease:'none', duration:5},0)
+      .fromTo('.con03 .b', {x:'-100%'},{x:'0%', ease:'none', duration:5},0)
 })
     
 $(document).ready(function(){

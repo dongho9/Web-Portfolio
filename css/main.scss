@@ -153,35 +153,35 @@ h1 a{
   transform: rotate(-135deg);
 }
 .gnbtoggle.close::after{
-    bottom: 15px;
-    transform: rotate(135deg);
+  bottom: 15px;
+  transform: rotate(135deg);
 }
 // 메인영역
 .s_title{
-    display: $none;
+  display: $none;
 }
 .intro{
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    z-index: 10;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
 }
 .tit{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 60px;
-    color: $basecolor2;
-    font-family: $tit;
-    font-size: 200px;
-    width: 100%;
-    padding-left: 5%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 60px;
+  color: $basecolor2;
+  font-family: $tit;
+  font-size: 200px;
+  width: 100%;
+  padding-left: 5%;
 }
 .tit span{
-    display: inline-block;
+  display: inline-block;
 }
 .tit span:first-child{
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .tit span:nth-child(2){
   font-style: italic;
@@ -190,314 +190,308 @@ h1 a{
   display: none;
 }
 .tit span:nth-child(4), .tit span:last-child{
-    display: none;
-    font-style: italic;
+  display: none;
+  font-style: italic;
 }
-    .tit.motion span{
-      width: 100%;
-        overflow: hidden;
-        transform: translate3d(0,0,0) skewY(0deg);
-    }
-    .tit.motion span b{
-      display: block;
-      animation-name: txtAni;
-      animation-duration: 1.3s;
-    }
-    @keyframes txtAni{
-      0%{
-          opacity: 0;
-      }
-      30%{
-          opacity: 0;
-          transform: translate3d(0,40px,0) skewY(8deg);
-          transform-origin: top left;
-      }
-    } 
-    .con02 > h2, .con03 > h2{
-      display: none;
-    }
-    .b{
-      font-family: 'Cormorant Infant', serif;
-      font-style: italic;
-    }
-    .con02{
-      padding-bottom: 100px;
-      position: relative;
-      z-index: 11;
-    }
-    .con02 .title, .con03 .title{
-      width: 100%;
-      height: 100vh;
-      font-size: 170px;
-      line-height: 0.9;
-      text-align: center;
-      padding-top: 40vh;
-      box-sizing: border-box;
-    }
-    .img.motion{
-      position: relative;
-      animation-name: imgAni;
-      animation-duration: 1s;
-    }
-    @keyframes imgAni{
-      0%{
-          transform: translateY(50px);
-      }
-      100%{
-          transform: translateY(0);
-      }
-    }
-    .img.motion::after{
-      content: "";
-      width: 100%;
-      height: 0%;
-      background-color: #fff;
-      position: absolute;
-      top: 0;
-      left: 0;
-      animation-name: mask;
-      animation-duration: 1.2s;
-    }
-    @keyframes mask{
-      0%{
-          height: 90%;
-      }
-      100%{
-          height: 0%;
-      }
-    }
-    .title p{
-      font-size: 150px;
-      color: $basecolor2;
-    }
-    .worklist{
-      width: 70%;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      will-change:scroll-position, contents;
-    }
-    .worklist li{
-      width: 45%;
-      margin-top: 200px;
-    }
-    .worklist li:nth-of-type(2n){
-      margin-top: 0;
-    }
-    .worklist li a{
-      display: block;
-      position: relative;
-    }
-    .txt.motion span{
-      overflow: hidden;
-      transform: translate3d(0,0,0) skewY(0deg);
-    }
-    .txt.motion span b{
-    display: block;
-    animation-name: txtAni;
-    animation-duration: 1.3s;
-    }
-    @keyframes txtAni{
-    0%{
-        opacity: 0;
-    }
-    30%{
-        opacity: 0;
-        transform: translate3d(0,40px,0) skewY(8deg);
-        transform-origin: top left;
-    }
-    } 
-    .textBox h3{
-      font-size: 35px;
-      font-weight: normal;
-      margin: 20px 0px 10px;
-      color: $basecolor2;
-    }
-    .info{
-      line-height: 25px;
-    }
-    .info span b{
-      display: inline-block;
-      color: #000000;
-      font-family: "Noto Sans KR", sans-serif;
-      font-style: normal;
-      font-weight: 600;
-    }
-    .info p:last-child{
-      float: right;
-    }
-    .worklist li img{
-      width: 100%;
-    }
-    .imgBox{
-      position: relative;
-    }
-    .imgBox img{
-      transition: 0.5s;
-    }
-    .worklist li a:hover .imgBox img{
-      filter: brightness(50%);
-    }
-    .worklist li a:hover .imgBox::before{
-      opacity: 1;
-      z-index: 2;
-    }
-    .worklist li a:hover .imgBox::after{
-      width: 168px;
-      height: 168px;
-    }
-    .imgBox::before{
-      content: "";
-      width: 168px;
-      height: 168px;
-      border-radius: 100%;
-      border: 1px solid #fff;
-      background: url(../image/readMore2.png);
-      background-repeat: no-repeat;
-      background-size: 35px;
-      background-position: center;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%) rotate(45deg);
-      z-index: 1;
-      transition: 0.5s;
-      opacity: 0;
-    }
-    .imgBox::after{
-      content: "";
-      width: 0px;
-      height: 0px;
-      border-radius: 100%;
-      background-color: #fff;
-      background-image: url(../image/readMore3.png);
-      background-repeat: no-repeat;
-      background-position: center;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 1;
-      animation-name: spin;
-      -webkit-animation-name: spin;
-      animation-duration: 10s;
-      -webkit-animation-duration: 10s;
-      animation-iteration-count: infinite;
-      -webkit-animation-iteration-count: infinite;
-      animation-timing-function: linear;
-      -webkit-animation-timing-function: linear;
-      transition: 0.5s;
-    }
-    @-webkit-keyframes spin{
-      0%{
-          transform: translate(-50%, -50%) rotate(0deg);
-      }
-      100%{
-          transform: translate(-50%, -50%) rotate(360deg);
-      }
-    }
-    @keyframes spin{
-      0%{
-          transform: translate(-50%, -50%) rotate(0deg);
-      }
-      100%{
-          transform: translate(-50%, -50%) rotate(360deg);
-      }
-    }
+.tit.motion span{
+  width: 100%;
+  overflow: hidden;
+  transform: translate3d(0,0,0) skewY(0deg);
+}
+.tit.motion span b{
+  display: block;
+  animation-name: txtAni;
+  animation-duration: 1.3s;
+}
+@keyframes txtAni{
+  0%{
+    opacity: 0;
+  }
+  30%{
+    opacity: 0;
+    transform: translate3d(0,40px,0) skewY(8deg); 
+  }
+} 
+.con02 > h2, .con03 > h2{
+  display: none;
+}
+.b{
+  font-family: 'Cormorant Infant', serif;
+  font-style: italic;
+}
+.con02{
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 11;
+}
+.con02 .title, .con03 .title{
+  width: 100%;
+  height: 100vh;
+  font-size: 170px;
+  line-height: 0.9;
+  text-align: center;
+  padding-top: 40vh;
+  box-sizing: border-box;
+}
+.img.motion{
+  position: relative;
+  animation-name: imgAni;
+  animation-duration: 1s;
+}
+@keyframes imgAni{
+  0%{
+    transform: translateY(50px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+.img.motion::after{
+  content: "";
+  width: 100%;
+  height: 0%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-name: mask;
+  animation-duration: 1.2s;
+}
+@keyframes mask{
+  0%{
+    height: 90%;
+  }
+  100%{
+    height: 0%;
+  }
+}
+.title p{
+  font-size: 150px;
+  color: $basecolor2;
+}
+.worklist{
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.worklist li{
+  width: 45%;
+  margin-top: 200px;
+}
+.worklist li:nth-of-type(2n){
+  margin-top: 0;
+}
+.worklist li a{
+  display: block;
+  position: relative;
+}
+.txt.motion span{
+  overflow: hidden;
+  transform: translate3d(0,0,0) skewY(0deg);
+}
+.txt.motion span b{
+  display: block;
+  animation-name: txtAni;
+  animation-duration: 1.3s;
+}
+@keyframes txtAni{
+  0%{
+    opacity: 0;
+  }
+  30%{
+    opacity: 0;
+    transform: translate3d(0,40px,0) skewY(8deg);
+    transform-origin: top left;
+  }
+} 
+.textBox h3{
+  font-size: 35px;
+  font-weight: normal;
+  margin: 20px 0px 10px;
+  color: $basecolor2;
+}
+.info{
+  line-height: 25px;
+}
+.info span b{
+  display: inline-block;
+  color: #000000;
+  font-family: "Noto Sans KR", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+}
+.info p:last-child{
+  float: right;
+}
+.worklist li img{
+  width: 100%;
+}
+.imgBox{
+  position: relative;
+}
+.imgBox img{
+  transition: 0.5s;
+}
+.worklist li a:hover .imgBox img{
+  filter: brightness(50%);
+}
+.worklist li a:hover .imgBox::before{
+  opacity: 1;
+  z-index: 2;
+}
+.worklist li a:hover .imgBox::after{
+  width: 168px;
+  height: 168px;
+}
+.imgBox::before{
+  content: "";
+  width: 168px;
+  height: 168px;
+  border-radius: 100%;
+  border: 1px solid #fff;
+  background: url(../image/readMore2.png);
+  background-repeat: no-repeat;
+  background-size: 35px;
+  background-position: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  z-index: 1;
+  transition: 0.5s;
+  opacity: 0;
+}
+.imgBox::after{
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-radius: 100%;
+  background-color: #fff;
+  background-image: url(../image/readMore3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  animation-name: spin;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transition: 0.5s;
+}
+@-webkit-keyframes spin{
+  0%{
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100%{
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes spin{
+  0%{
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100%{
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
 
-    .con03{
-      width: 100%;
-      text-align: center;
-    }
-    .con03 .title{
-      z-index: 11;
-      position: relative;
-    }
-    .con03_inner{
-      width: 45%;
-      margin: 0 auto;
-    }
-    .con03_inner ul li{
-      margin-bottom: 80px;
-    }
-    .con03_inner ul li a{
-      color: #fff;
-      display: block;
-      width: 100%;
-      height: 100%;
-      font-size: 110px;
-      letter-spacing: -1px;
-      font-weight: bold;
-      transition: all 0.5s ease-in-out;
-      opacity: 1;
-      font-family: $tit;
-      font-style: italic;
-      text-align: center;
-      white-space: nowrap;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .fadeImg{
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 350px;
-      height: 220px;
-      object-fit: cover;
-      filter: brightness(30%);
-      opacity: 0;
-    }
-    .color{
-      opacity: 0.7;
-      transition: all 0.3s ease-in-out;
-    }
-    .color:hover{
-      color: $basecolor2;
-      font-size: 115px;
-    }
+.con03{
+  width: 100%;
+  text-align: center;
+}
+.con03 .title{
+  z-index: 11;
+  position: relative;
+}
+.con03_inner{
+  width: 45%;
+  margin: 0 auto;
+}
+.con03_inner ul li{
+  margin-bottom: 80px;
+}
+.con03_inner ul li a{
+  color: #fff;
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 110px;
+  letter-spacing: -1px;
+  font-weight: bold;
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+  font-family: $tit;
+  font-style: italic;
+  text-align: center;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fadeImg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 350px;
+  height: 220px;
+  object-fit: cover;
+  filter: brightness(30%);
+  opacity: 0;
+}
+.color{
+  opacity: 0.7;
+  transition: all 0.3s ease-in-out;
+}
+.color:hover{
+  color: $basecolor2;
+  font-size: 115px;
+}
 // 푸터영역
 footer{
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    color: #fff;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  color: #fff;
 }
 footer .textwrap{
-    position: absolute;
-    width: 100%;
-    padding: 0 5%;
-    box-sizing: border-box;
-    font-size: 100px;
-    line-height: 1;
-    letter-spacing: -1px;
-    top: 50%;
-    transform: translateY(-50%);
+  position: absolute;
+  width: 100%;
+  padding: 0 5%;
+  box-sizing: border-box;
+  font-size: 100px;
+  line-height: 1;
+  letter-spacing: -1px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .textwrap .title{
-    font-size: 20px;
-    margin-bottom: 30px;
-    padding-left: 15px;
+  font-size: 20px;
+  margin-bottom: 30px;
+  padding-left: 15px;
 }
 .textwrap .contact{
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .textwrap a{
-    display: block;
-    margin-top: -30px;
+  display: block;
+  margin-top: -30px;
 }
 footer .bottom{
-    position: absolute;
-    bottom: 5%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 5%;
-    box-sizing: border-box;
-    font-size: 30px;
-    letter-spacing: -1px;
-    color: #fff;
+  position: absolute;
+  bottom: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5%;
+  box-sizing: border-box;
+  font-size: 30px;
+  letter-spacing: -1px;
+  color: #fff;
 }
 .mail{
   color: #fff;
