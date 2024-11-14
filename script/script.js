@@ -88,12 +88,6 @@ $(document).ready(function(){
             // markers:true
         }
     })
-    .fromTo('.wrap', {background:'#F6F3EA'},{background:'#1c1515', ease:'none', duration:3},0)
-    .fromTo(
-        '.innerHeader',
-        { backgroundColor: 'rgba(246, 243, 234, 0.8)' }, // 시작 색상
-        { backgroundColor: 'rgba(28, 21, 21, 0.8)', ease: 'none', duration: 3},0 // 끝 색상, 애니메이션 설정
-      )
       .fromTo('.con03 .a', {x:'100%'},{x:'0%', ease:'none', duration:5},0)
       .fromTo('.con03 .b', {x:'-100%'},{x:'0%', ease:'none', duration:5},0)
 })
@@ -156,3 +150,15 @@ $(document).ready(function(){
         });
     });
 });
+const lenis = new Lenis()
+
+lenis.on('scroll', (e) => {
+// console.log(e)
+})
+
+function raf(time) {
+lenis.raf(time)
+requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
