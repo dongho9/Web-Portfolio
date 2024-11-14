@@ -6,7 +6,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
 @font-face {
   font-family: "bigilla"; /* 사용할 이름 */
-  src: url("/bigilla/Bigilla-Bold.otf") format("opentype");
+  src: url("../bigilla/Bigilla-Bold.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
